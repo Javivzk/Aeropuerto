@@ -19,7 +19,7 @@ public class Vuelo {
         this.listaPasajeros = new Pasajero[numMaxPasajeros];
     }
 
-    public void insertarPasajero(Pasajero pasajero) {
+    public void insertarPasajero(Pasajero pasajero){
         listaPasajeros[numActualPasajeros] = pasajero;
         numActualPasajeros++;
     }
@@ -78,10 +78,10 @@ public class Vuelo {
 
     public Pasajero getPasajero(String pasaporte) {
         boolean encontrado = false;
-        int i = 0;
+        int i=0;
         Pasajero pas = null;
-        while ((!encontrado) && (i < listaPasajeros.length)) {
-            if (pasaporte.equals(listaPasajeros[i].getPasaporte())) {
+        while ((!encontrado)&&(i<listaPasajeros.length)) {
+            if (pasaporte == listaPasajeros[i].getPasaporte()){
                 encontrado = true;
                 pas = listaPasajeros[i];
             }
